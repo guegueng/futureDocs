@@ -3,6 +3,7 @@ title: Installation
 layout: default
 nav_order: 2
 ---
+
 # Library Usage Statistics Harvesting and Reporting
 [//]: (![banner image from documentation folder](docs/cc-plus-banner.png?raw=true))
 ## A configurable application for collecting library usage data
