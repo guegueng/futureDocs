@@ -7,7 +7,7 @@ nav_order: 3
 The CC-PLUS home page contains the universal navigation and three main sections.
 
 ## Navigation
-[hold for image]
+![navigation](images/navbar.png)
 
 The main CC-PLUS navigation bar has options for :
 * Home
@@ -29,21 +29,21 @@ The main CC-PLUS navigation bar has options for :
   * Logout
 
 ## Custom Reports
-[hold for image]
-The next area of the home page holds quick links to customized report configurations. More information about setting these up can be found in ,[Creating and Exporting Custom Reports].
+![custom reports](images/savedReports.png)
+The next area of the home page holds quick links to customized report configurations. More information about setting these up can be found in, [Creating and Exporting Custom Reports](reports.markdown).
 
 ## Failed Harvest Alerts
-[hold for image]
-Next is a list of up to 10 of the most recent failed harvests. These are attempts to harvest a report from a provider that fail on 10 repeated attempts. Each contains a link to the specific details for each harvest, and at the bottom a link to a page listing all failed harvests. More information about Failed Harvest Alerts can be found in [Harvesting Reports].
+![failed harvests](images/home_failed.png)
+Next is a list of up to 10 of the most recent failed harvests. These are attempts to harvest a report from a provider that fail on 10 repeated attempts. Each contains a link to the specific details for each harvest, and at the bottom a link to a page listing all failed harvests. More information about Failed Harvest Alerts can be found in [Harvesting Reports](harvesting.markdown).
 
 ## Recent Activity
-[hold for image]
+![recent activity](images/recentActivity.png)
 
 The last section of the home page lists the 10 most recent harvest attempts. Each has a link to a page with more details on each harvest attempt and a link at the bottom to the full log of harvests. More information about the harvest activity log can be found in [Harvesting Reports].
 
 ## Getting Started
 
-1. Understanding the [Settings pages]
-  1. [Process for initial upload of settings]
-2. [Harvesting Reports]
-3. [Creating and Exporting Custom Reports]
+1. Understanding the [Settings pages](settings.markdown)
+2. [Process for initial upload of settings](ingest_settings.markdown)
+3. [Harvesting Reports](harvesting.markdown)
+4. [Creating and Exporting Custom Reports](reports.markdown)
