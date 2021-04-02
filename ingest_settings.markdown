@@ -8,13 +8,13 @@ nav_order: 5
 
 ## Part One: Gather credentials
 1. Begin with a list of each provider you want to harvest from. You will need the following for each:
- 1. Name
- 2. SUSHI API URL
- 3. Which reports to be harvested
+  * Name
+  * SUSHI API URL
+  * Which reports to be harvested
 2. Sources for provider information:
- 1. CC-PLUS provider spreadsheet
- 2. COUNTER Registry
- 3. Ex Libris list
+  * CC-PLUS provider spreadsheet
+  * COUNTER Registry
+  * Ex Libris list
 
 _Notes: Look at the COUNTER and Ex Libris lists closely. CC-PLUS works with Counter R5, not R4. They may or may not also list the type of credentials that will be needed in the next step and/or the types of reports they make available. These may or may not be up to date, so additional testing to verify these details will be important anyway._
 
