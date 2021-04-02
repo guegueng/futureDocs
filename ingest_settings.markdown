@@ -41,7 +41,7 @@ nav_order: 5
 
         -- Add date in yyyy-mm-dd format
     
-        -- The resulting URL should look like: https://www.jstor.org/sushi/reports/tr?&begin_date=2020-01-01&end_date=2020-01-31
+        -- The resulting URL should look like: `https://www.jstor.org/sushi/reports/tr?&begin_date=2020-01-01&end_date=2020-01-31`
   
     * Requestor Id
 
@@ -74,12 +74,14 @@ nav_order: 5
 10. Hit enter
 11. Now, parse the results…
     * You will likely receive a response in JSON, a data format. (If you use Google Chrome as your browser, you might want to add [this extension](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa) to make it easier to read. [This extension](https://addons.mozilla.org/en-US/firefox/addon/basic-json-formatter) is good for Firefox) 
-    * If the request was successful, you will see something like this, with report items: [hold for image]
+    * If the request was successful, you will see something like this, with report items: 
+    ![valid report](images/validReport.png)
     * If it is not successful, you may see different types of errors:
 
         -- HTML errors: this means that the URL is invalid or you’ve made a typo in the root URL. Alternatively, it could mean that the IP address needs to be added to a permissions list by the vendor. In these errors you won’t get any JSON response.
  
         -- SUSHI errors: with these errors you will see a JSON response, as the example above, but something is preventing your specific request from working. Here is an example:
+        ![report with error](images/errorReport.png)
 
     * Looking underneath the “Exceptions” element, you will see a code, severity, and message. A list of the typical codes we see and what needs to be fixed can be found [here](https://docs.google.com/spreadsheets/d/1aNatq9KDmwYHTn0EYugGEKJF20q0C6fIcYe24xbvFTA/edit#gid=0)
     * Strategies to fix errors include:
