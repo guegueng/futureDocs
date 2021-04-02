@@ -31,7 +31,7 @@ nav_order: 5
 ## Part Two: test credentials and URLs
 6. Now we can test that we have the correct URLs and credentials.
   * _Note: the following instructions describe how to create and test a SUSHI request in a browser. There is a spreadsheet template set up to do this for you at: SUSHI URL template_
-  * _Just fill in columns B-H and then copy the correct URL from columns I-L depending on which credentials are required. Paste that URL into your browser and hit enter. Then jump to step 10 in these directions._
+  * _Just fill in columns B-H and then copy the correct URL from columns I-L depending on which credentials are required. Paste that URL into your browser and hit enter. Then jump to step 5 in these directions._
 7. First open a browser tab and put in the SUSHI endpoint URL, such as `https://www.jstor.org/sushi/reports/` _(don’t hit enter until we complete building the URL in step 10 )_
 8. Next, add the report you want to request (tr, dr, pr, or ir … tr is the most commonly available) and a `?`, i.e. `https://www.jstor.org/sushi/reports/tr?`
 9. Next, add the parameters of your request, joining them with an ampersand:
