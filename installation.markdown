@@ -7,7 +7,6 @@ nav_order: 2
 # Library Usage Statistics Harvesting and Reporting
 [//]: (![banner image from documentation folder](docs/cc-plus-banner.png?raw=true))
 ## A configurable application for collecting library usage data
-This project has been generously supported by funding from the [Institute of Museum and Library Services (IMLS)](https://imls.gov/grants/grant-programs) and the vision, time, and expertise of mulitple consortia and volunteers across North America and Europe. Full details the project partners, funding and objectives can be found [here:  http://www.palci.org/cc-plus-overview/](http://www.palci.org/cc-plus-overview/).
 
 CC-Plus is currently designed to run as a standalone web-based Laravel application connected to a MySQL database and a web server.  It allows for multiple, or just a single, consortia to be managed within a host system.  The report harvesting system uses the SUSHI protocol, and expects to receive valid and conformant COUNTER-5 usage reports.
 
@@ -242,7 +241,7 @@ $
 ```
 
 ** Congratulations **
-You should now be able to connect and login to the application using the Administrator credential for your initial consortium!
+You should now be able to connect and login to the application using the Administrator credential for your initial consortium! You can now create users, institutions, and providers through the [web interface](overview.markdown).
 
 ### Step 10: Define Harvesting Schedule (Optional)
 Automated harvesting for CC-Plus is defined using the schedule defined in `app/Console/Kernel.php` (which we created in [Step 4, above](#step-4-install-the-application)). The initial file is configured to automate harvesting for a single consortium using two queue handler processes (workers) which are scheduled to run every ten minutes. This means that at least one of the workers will wake and check for recently queued jobs every 10-minutes. An example file for a two-consortium configuration is also included, named: `Kernel.php.example-multiple`.
