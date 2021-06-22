@@ -34,7 +34,8 @@ Once the application is installed, the application administrator will need to co
 ## Prerequisites
 * Apache 2.4+
 	* Make sure `mod_rewrite` is enabled
-* MySQL (5.6+) or MariaDB (10.3+)
+* MySQL (5.7.9+) or MariaDB (10.3+)
+    (Note that MySQL 8.x may have installation issues relating to GRANT commands)
 * PHP: 7.3+ including
 	* php-gd
 	* php-xml
@@ -48,7 +49,7 @@ Once the application is installed, the application administrator will need to co
 ## Installation (Un*x)
 
 ### Step 1: Apache
-Make sure you have a working [apache server configured](https://httpd.apache.org/docs/2.4/), including `mod_rewrite`, for serving the pulicly-accessible elements of the CC-Plus application. For the purposes of these instructions, we will refer to this place as: `/var/www/ccplus/`.
+Make sure you have a working [apache server configured](https://httpd.apache.org/docs/2.4/), including `mod_rewrite`, for serving the publicly-accessible elements of the CC-Plus application. For the purposes of these instructions, we will refer to this place as: `/var/www/ccplus/`.
 
 Define the public-facing web directory settings something along the lines of:
 ```bash
@@ -83,9 +84,11 @@ Next, the local `.env` needs to be modified to match the current host environmen
 $ cp .env.example .env
 $ vi .env
 ```
-* Assign APP_URL with the URL that your webserver uses connects to your public documents folder (step-1, above)
-* Assign database credentials (a user with rights to create databases and grant privleges):
-	* DB_USERNAME, DB_PASSWORD, DB_USERNAME2, DB_PASSWORD2
+* Assign APP_URL with the URL that your webserver uses to connect to your public documents folder (step-1, above)
+* Assign database credentials (a user with rights to create databases and grant privileges):
+    * DB_USERNAME, DB_PASSWORD, DB_USERNAME2, DB_PASSWORD2
+* Update settings for connecting to email and SMTP services (will vary depending on server environment). These settings are necessary for the system to generate forgotten-password reset links.
+    * MAIL_MAILER, MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_ENCRYPTION, MAIL_FROM_ADDRESS, MAIL_FROM_NAME
 
 Note that the entries in `.env`, including the `CCP_*` variables at the bottom, represent **default** values which, if left undefined, can be overridden by values in `./config/*` files.
 
@@ -122,7 +125,7 @@ And then install npm:
 ```bash
 $ npm install
 ```
-You also need to generate an encryption key for  the application. This key will be used to encrypt the raw JSON report and application data, **not** passwords. This only needs to be done during installation. Resetting this key later will make any existing saved data unrecoverable unless you maintain a record of all previous key value(s). This command will update the `.env` with a unique value for APP_KEY.
+You also need to generate an encryption key for the application. This key will be used to encrypt the raw JSON report and application data, **not** passwords. This only needs to be done during installation. Resetting this key later will make any existing saved data unrecoverable unless you maintain a record of all previous key value(s). This command will update the `.env` with a unique value for APP_KEY.
 ```bash
 $ php artisan key:generate
    Application key set successfully
@@ -147,7 +150,7 @@ $ cd /usr/local/CC-Plus/public/
 $ mv index.php.example ./index.php
 $ vi index.php
    . . . .
-	define('_CCPHOME_','/usr/local/CC-Plus');  // Modify this line if necessary
+	define('_CCPHOME_','/usr/local/CC-Plus/');  // Modify this line as necessary, and include a trailing slash
    . . . .
 $ cd ..
 ```
@@ -198,7 +201,7 @@ Seeded: Database\Seeders\CcplusErrorsTableSeeder (10.23ms)
 $
 ```
 ### Step 9: Add a Consortium
-The `ccplus:add_consortium` command script prompts for inputs and create the new consortium. **Note:** The "database key" is used to create a consortium-specific database named "ccplus_< database-key-value >".
+The `ccplus:add_consortium` command script prompts for inputs and creates the new consortium. **Note:** The "database key" is used to create a consortium-specific database named "ccplus_< database-key-value >".
 ```bash
 $ php artisan ccplus:addconsortium
   New consortium name?:
@@ -242,11 +245,11 @@ $
 You should now be able to connect and login to the application using the Administrator credential for your initial consortium!
 
 ### Step 10: Define Harvesting Schedule (Optional)
-Automated harvesting for CC-Plus is defined using the schedule defined in `app/Console/Kernel.php` (which we created in [Step 4, above] (#step-4-install-the-application)). The initial file is configured to automate harvesting for a single consortium using two queue handler processes (workers) which are scheduled to run every ten minutes. This means that at least one of the workers will wake and check for recently queued jobs every 10-minutes. An example file for a two-consortium configuration is also included, named: `Kernel.php.example-multiple`.
+Automated harvesting for CC-Plus is defined using the schedule defined in `app/Console/Kernel.php` (which we created in [Step 4, above](#step-4-install-the-application)). The initial file is configured to automate harvesting for a single consortium using two queue handler processes (workers) which are scheduled to run every ten minutes. This means that at least one of the workers will wake and check for recently queued jobs every 10-minutes. An example file for a two-consortium configuration is also included, named: `Kernel.php.example-multiple`.
 
 More details on scheduling tasks in Laravel applications can be found [here: https://laravel.com/docs/8.x/scheduling](https://laravel.com/docs/8.x/scheduling)
 ### Step 11: Add Scheduler to System Cron (Optional)
-The default Kernel.php Scheduler configuration expects to be launched every minutes. If nothing needs to be processed, the scheduler will exit until the next cycle. These lines (or a close approximation) need to be added to the system cron processing to enable unattended harvesting:
+The default Kernel.php Scheduler configuration expects to be launched on a regular interval (for example, every 10 minutes). If nothing needs to be processed, the scheduler will exit until the next cycle. These lines (or a close approximation) need to be added to the system cron processing to enable unattended harvesting:
 ```
 # Run CC+ Laravel scheduler every 10 minutes
 */10 * * * * root cd /usr/local/CC-Plus && php artisan schedule:run >> /dev/null 2>&1
@@ -274,7 +277,7 @@ A brief description for each command is below. See the help screen for each comm
 * ccplus:sushiloader  
 	Intended to run nightly by the Kernel.php scheduler, this command scans the SUSHI settings for all institutions and providers within a consortium and loads requests into the gloabl jobs queue (globaldb:jobs table).
 * ccplus:sushiqw  
-	Intended to run by the Kernel,php scheduler (by default every 10 minutes), this command scans the jobs queue, issues SUSHI requests to report providers, and stores/logs the results.
+	Intended to run by the Kernel.php scheduler (by default every 10 minutes), this command scans the jobs queue, issues SUSHI requests to report providers, and stores/logs the results.
 * ccplus:C5test  
 	This is a command for testing raw report data. Accepts COUNTER-5 JSON report data from a file and attempts to validate and store it in the running system
 
