@@ -30,7 +30,7 @@ The list of providers includes:
 
 ![providers list](new image.png)
 
-New users can be added in bulk through the import function described in [Process for initial ingest of settings](ingest_settings.markdown), or one at a time using the “Create A Provider” button.
+New providers can be added in bulk through the import function described in [Process for initial ingest of settings](ingest_settings.markdown), or one at a time using the “Create A Provider” button. SUSHI settings for combinations of providers and institutions can also be uploaded on this page or through the Institution page. Again, see [Process for initial ingest settings](ingest_settings.markdown) for more details.
 
 ![new provider dialog](images/newProvider.png)
 
