@@ -6,12 +6,12 @@ nav_order: 5
 
 # Process for initial ingest of settings
 
-##Table of Contents
-* [Part One: Gather credentials](#part-one:-gather-credentials)
-* [Part Two: Test credentials](#part-two:-test-credentials)
-* [Part Three: Format spreadsheets](#part-three:-format-spreadsheets)
-* [Part Four: Sushi settings](#part-four:-sushi-settings)
-* [Part Four: Groups and User accounts](#part-five:groups-and-user-accounts)
+## Table of Contents
+* [Part One: Gather credentials](#part-one-gather-credentials)
+* [Part Two: Test credentials](#part-two-test-credentials)
+* [Part Three: Format spreadsheets](#part-three-format-spreadsheets)
+* [Part Four: Sushi settings](#part-four-sushi-settings)
+* [Part Four: Groups and User accounts](#part-five-groups-and-user-accounts)
 
 ## Part One: Gather credentials
 1. Begin with a list of each provider you want to harvest from. You will need the following for each:
