@@ -19,7 +19,7 @@ nav_order: 5
   * SUSHI API URLs: the URL of the SUSHI service where reports can be retrieved
   * Which reports to be harvested: the master reports to be harvested from the provider. For more information on these see the [COUNTER R5 Code of Practice](https://www.projectcounter.org/counter-code-practice-release-5-update/)
 2. Sources for provider information:
-  * CC-PLUS provider spreadsheet
+  * [CC-PLUS provider spreadsheet](resources/CC-PLUS_Providers.xlsx)
   * [COUNTER Registry](https://www.projectcounter.org/about/register/)
   * [Ex Libris list of SUSHI endpoints](https://knowledge.exlibrisgroup.com/Alma/Product_Documentation/010Alma_Online_Help_(English)/020Acquisitions/090Acquisitions_Infrastructure/010Managing_Vendors/SUSHI_Vendor_Lists)
 
@@ -36,8 +36,7 @@ nav_order: 5
 
 ## Part Two: Test Credentials
 6. Now we can test that we have the correct URLs and credentials.
-  * _Note: the following instructions describe how to create and test a SUSHI request in a browser. There is a spreadsheet template set up to do this for you at: SUSHI URL template_ [link needed here]
-  * _Just fill in columns B-H and then copy the correct URL from columns I-L depending on which credentials are required. Paste that URL into your browser and hit enter. Then jump to step 5 in these directions._
+  * _Note: the following instructions describe how to create and test a SUSHI request in a browser. There is a spreadsheet template set up to do this for you at: [SUSHI URL template](SUSHI_URL_template.xlsx). Just fill in columns B-H and then copy the correct URL from columns I-L depending on which credentials are required. Paste that URL into your browser and hit enter. Then jump to step 5 in these directions._
 7. First open a browser tab and put in the SUSHI endpoint URL, such as `https://www.jstor.org/sushi/reports/` _(don’t hit enter until we complete building the URL in step 10 )_
 8. Next, add the report you want to request (tr, dr, pr, or ir … tr is the most commonly available) and a `?`, i.e. `https://www.jstor.org/sushi/reports/tr?`
 9. Next, add the parameters of your request, joining them with an ampersand:
@@ -92,7 +91,7 @@ nav_order: 5
 
         ![report with error](images/errorReport.png)
 
-    * Looking underneath the “Exceptions” element, you will see a code, severity, and message. A list of the typical codes we see and what needs to be fixed can be found [link needed here] [here](https://docs.google.com/spreadsheets/d/1aNatq9KDmwYHTn0EYugGEKJF20q0C6fIcYe24xbvFTA/edit#gid=0)
+    * Looking underneath the “Exceptions” element, you will see a code, severity, and message. A list of the typical codes we see and what needs to be fixed can be found [here](resources/SUSHI_error_codes.xlsx)
     * Strategies to fix errors include:
     
         -- Check that you have all the credentials and URL correct.
@@ -109,11 +108,11 @@ nav_order: 5
 13. If this process was successful, the credentials and URL are correct and you can add them to your bulk upload spreadsheet.
 
 ## Part Three: Format Spreadsheets
-14. Begin with the providers spreadsheet template `https://docs.google.com/spreadsheets/d/16O1FNPN5dWK_H0A8PDZ7V5avq8jmj7Sxy-AK8azRyfM/edit#gid=0:` 
+14. Begin with the [providers spreadsheet template](resources/Providers_template.xls).
 
-You can also see an example of a filled in spreadsheet at [link here]. An image of a filled in spreadsheet is below for reference.
+You can also see an example of a [filled in spreadsheet](resources/Providers_example.xls). An image of a filled in spreadsheet is below for reference.
 
-[image here]
+![example of provider import spreadsheet](images/providersExample.png)
 
 On each row fill in the following:
     * ID: assign a number that will be the id for the provider. Any number is fine as long as it doesn’t duplicate. We suggest you just number them sequentially as you add them: 1, 2, 3, etc.
@@ -137,10 +136,12 @@ On each row fill in the following:
 15. Save the file (a single sheet) as a comma separated values file, or `.csv`. You should also save a version of this file locally for reference to the ID numbers of each provider in a later step.
 16. Go to the "Providers" page in CC-PLUS and hit the "import providers" button.
 17. Follow the steps on the dialog box that pops up to add your spreadsheet.
-18. Next, you will create your institutions spreadsheet. Download a template [here](https://docs.google.com/spreadsheets/d/1Uw2Q0mxkLvtXJs25sw2iVvjcIAPBCKchdBs5j836Wzc/edit#gid=0). 
+18. Next, you will create your institutions spreadsheet. Download a template [here](resources/Institutions_template.xls). 
 
-As with the providers, there is an example of a filled in spreadsheet [link here]. The image below also gives an example.
-[image here]
+As with the providers, there is an example of a [filled in spreadsheet](resources/Institutions_example.xls) as well. The image below also gives an example.
+
+![example of Institutions import spreadsheet](images/institutionsExample.png)
+
     * Each institution will have a numeric ID number. These are just numbers. They cannot be repeated within the institution list, but can be the same as those used for providers. DO NOT USE THE ID `1`. This is reserved for the Entire Consortium as a group and should not be overwritten.
     * On the first line fill in the following for your first institution:
 
@@ -154,9 +155,9 @@ As with the providers, there is an example of a filled in spreadsheet [link here
 19. Go to the Institutions page and click the "Import Institutions" button. Again, follow the instructions in the dialog to add the spreadsheet. Save a local copy as well so that you can reference the ID numbers
 
 ## Part Four: SUSHI Settings
-20. Now that providers and institutions have been created, you can upload the credentials needed to connect the two entities. You can use [this template] [link here] and a filled-in example is at: [link here].
+20. Now that providers and institutions have been created, you can upload the credentials needed to connect the two entities. You can use [this template](resources/SushiSettings_template.xls) and see a [filled-in example](resources/SushiSettings_example.xls).
 
-[image here]
+![example of Sushi Settings import spreadsheet](images/sushiSettingsExample.png)
 
 21. Each row will represent the connection between one instiution and one provider. This means that institutions and providers will appear in several rows in various combinations. Refer to the saved provider and institution spreadsheets for the ID numbers to use:
     * Institution ID: ID number of the institution as found in the previous spreadsheet
@@ -172,9 +173,9 @@ As with the providers, there is an example of a filled in spreadsheet [link here
 _Note: you can export a spreadsheet of the existing SUSHI settings from these pages as well. Exported spreadsheets contain two extra columsn for Institution name and Provider name. These columns will be ignored if you re-upload an edited version of this same spreadsheet._
 
 ## Part Five: Groups and User Accounts
-23. The last two settings pages also allow for bulk import: Groups and Users. Starting with groups, you can download a template [link here], or a filled-in version [link here]
+23. The last two settings pages also allow for bulk import: Groups and Users. Starting with groups, you can download a [template](resources/InstitutionGroups_template.xls), or a [filled-in version](resources/InstitutionGroups_example.xls).
 
-[image here]
+![example of Groups import spreadsheet](images/groupsExample.png)
 
 24. Groups only consist of three columns:
     * Group ID: an ID number unique to the groups, just like in the other settings. Any number may be used.
@@ -182,7 +183,12 @@ _Note: you can export a spreadsheet of the existing SUSHI settings from these pa
     * Group members: input the ID numbers for the instiutions in the group, separating each with a comma.
 25. Once the spreadsheet is filled in, it can be imported using the "Import Groups" button.
 
-26. Finally, you can also create an import spreadsheet for User accounts with [this template](https://docs.google.com/spreadsheets/d/1qZEZpMlzHfpj8PcOK-XjjTUVO5D6S3r1L67m6L9f6eI/edit#gid=0) 
+26. Finally, you can also create an import spreadsheet for User accounts with [this template](resources/Users_template.xls), or see the [filled-in example](resources/Users_example.xls).
+
+![example of Users import spreadsheet](images/usersExample.png)
+
+
+
     * Id: As with the other spreadsheets, create a unique ID number within the sheet for each user
     * Email: a unique email address is required for each user. They will use this email as their login username
     * Password: create an initial password for the user that you will share with them
@@ -203,6 +209,6 @@ _Note: you can export a spreadsheet of the existing SUSHI settings from these pa
 
     * Institution ID: put the numeric ID from the Institution Spreadsheet for the institution this user belongs to
 
-27. Save as a .csv file. An example of a filled in spreadsheet is [here](https://docs.google.com/spreadsheets/d/1v6mImadDPRXE5rcbMIDwzbrVF3_lJ2bKcQgyh_x7Nf0/edit#gid=765756035) 
+27. Save as a .csv file.
 
 28. Go to the Institution page and click the “Import Institutions” button. Again, follow the instructions in the dialog to add the spreadsheet.
