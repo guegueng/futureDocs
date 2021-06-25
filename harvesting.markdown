@@ -68,7 +68,7 @@ From this page you can see the result of each attempt to harvest the monthly rep
 
 ![error code](images/errorCode.png)
 
-You can also see the error by downloading the Raw Data in JSON and viewing it in a browser. A full list of errors and suggested actions is available at: [link here]. 
+You can also see the error by downloading the Raw Data in JSON and viewing it in a browser. A full list of errors and suggested actions is available [here](resources/SUSHI_error_codes.xlsx). 
 
 If the error is not something that can be fixed before the next attempt, you can press the “stop” button to stop the harvest process. Once an issue has been fixed, returning to this page and pressing “restart” will put the harvest back in the queue for harvesting.
 
@@ -82,7 +82,7 @@ The other sub-page under "Activity" is Alerts. These occur when a harvest attemp
 
 The alerts page is similar to the harvest log, listing the month and year of the report , the type of report, provider, and institution. The details page (the same page as that described above in Harvest Details), is linked from the “Condition” link for each harvest. You can use this page to determine what the issue is with the harvest and potentially find a solution.
 
-At the beginning of each line is a status. In this list “status” refers to whether or not you want to keep the alert active (i.e. on this list). By clicking the drop-down, you may also choose to “silence” the alert (keep it from the home page [NOTE: this is currently a bug and doesn’t work]), or delete it from this list.
+At the beginning of each line is a status. In this list “status” refers to whether or not you want to keep the alert active (i.e. on this list). By clicking the drop-down, you may also choose to “silence” the alert (keep it from the home page [_NOTE: this is currently a bug and doesn’t work_]), or delete it from this list.
 
 ![status options](images/status.png)
 
