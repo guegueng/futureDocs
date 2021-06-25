@@ -34,7 +34,7 @@ The list of providers includes:
 * Institutions served: the institutions that can harvest from this provider
 * Harvest Day: the day of the month data is harvested.
 
-![providers list](new image.png)
+![providers list](images/.png)
 
 New providers can be added in bulk through the import function described in [Process for initial ingest of settings](ingest_settings.markdown), or one at a time using the “Create A Provider” button. SUSHI settings for combinations of providers and institutions can also be uploaded on this page or through the Institution page. Again, see [Process for initial ingest settings](ingest_settings.markdown) for more details.
 
@@ -73,7 +73,7 @@ You may use the "Test Settings" button before connecting. This will send a reque
 
 In the list of existing connections, you can either delete the credentials, or open and edit them by clicking “Settings & Harvests”
 
-[hold for image]
+![settings page](images/settingsPage.png)
 
 The resulting page will list the credentials, which are editable, and a list of the recent harvests for this specific provider and institution.
 
@@ -87,7 +87,7 @@ As with the other two entities, instructions to add institutions in bulk are fou
 
 Institutions must have a name, and whether or not they are active or inactive. Like Providers, if data exists for the institution in the system it cannot be deleted and must be made “inactive” if you no longer wish to harvest data.
 
-Institutions can further be optionally described with the number of FTE, membership in a group (also described further later), and an open note field.
+Institutions can further be optionally d0escribed with the number of FTE, membership in a group (also described further later), and an open note field.
 
 New institutions are created either one at a time using the "Create New Institution" button or via the bulk import process. In the Institution settings multiple sets of SUSHI credentials can also be uploaded in bulk. Both processes are explained in the [Process for initial ingest of settings](ingest_settings.markdown) page.
 
@@ -111,7 +111,7 @@ The groups list is very simple, with just name and buttons to edit or delete. Gr
 
 Once the name is saved, you will return to the list of groups. From there, you can choose to “Edit” the new group. Institutions can then be added or removed to the group in the next window.
 
-![edit group dialog](images/editGroup)
+![edit group dialog](images/editGroup.png)
 
 
 ## Users
