@@ -6,13 +6,20 @@ nav_order: 7
 
 # Creating and Exporting Custom Reports
 
+## Table of Contents
+* [Creating a Report](#creating-a-report)
+* [Customizing a Report](#customizing-a-report)
+* [Exporting a Report](#exporting-a-report)
+* [Saving a Report](#saving-a-report)
+* [The Report List](#the-report-list)
+
 ## Creating a Report
 
 To create a report with CC-PLUS, you will select “Create” from the “Reports” option in the main navigation. Much like doing a manual harvest, the first steps include selecting the institution provider and report desired.
 
 ![create report page](images/createReport.png)
 
-The drop-downs on this page for institutions and providers are limiters, meaning that if you make no selection here all institutions you have access to and all providers will be included in the report. Once you make a selection in any of these categories, the choices you have for reports will adapt to only allow you to create a report for which some data is available.
+The drop-downs on this page for institutions and providers are limiters, meaning that if you make no selection here all institutions you have access to and all providers will be included in the report. Once you make a selection in any of these categories, the choices you have for reports will adapt to only allow you to create a report for which data is available. If you have selected to view a report for a group of institutions you will not be able to narrow by individual institution later when customizing the report.
 
 ![report dialog](images/reportLimit.png)
 
@@ -34,7 +41,7 @@ You will be taken to a screen to make any additional customizations or adjustmen
 
 ## Customizing a Report
 
-On the initial report screen, you are presented with configurable options for date, columns or variables of data, and filters for those variables.
+On the initial report screen, you are presented with configurable options for date, columns or variables of data, and filters for those variables. 
 
 ![report preview](imgages/reportPreview.png)
 
@@ -49,22 +56,6 @@ Once you have chosen your columns, hit the “Display Preview” button to get a
 ![preview of report data](images/initialData.png)
 
 This will allow you to verify that you have included all the data you want in your final report. You may further adjust the columns and filters and hit the “Refresh Preview” button to update the table shown.
-
-## Saving a Report
-
-If you are happy with the report you have created and it is something you want to be able to come back to regularly, you can use the “Save configuration” option to create a link on your home page directly back to this report. (Note: if you chose “last month” or “last year” for your date settings, the direct link will always go back to the latest month or year from the current date. If you select a custom date, with a specific begin and end, the link will always return you to a report for those specific dates).
-
-To save a configuration you just have to give it a name. You may also overwrite an existing saved report to update it.
-
-![report save options](images/saveReport.png)
-
-Once the report is saved, you will see a link to the report from the home page and the Report List:
-
-![home page with saved report options](images/savedReports.png)
-
-## Exporting a Report
-
-All reports are exported as a file with the “.csv” (comma separated values) extension which can be opened with any spreadsheet or text editing software.
 
 Additionally, you have two options for how the data within the report is formatted. The default is called the “CC+ Compact” format. This lists every title for which there is data in a single row and breaks up different metrics into separate columns.
 
@@ -81,6 +72,22 @@ The format option is selected at the top of the page, just under the date option
 ![selection options for report format](images/formatPicker.png)
 
 Just like with other options, if you change the format type, you must hit “Refresh Preview” to see the change displayed at the bottom of the page. COUNTER formatting takes longer for CC-PLUS to generate, particularly for large reports.
+
+## Exporting a Report
+
+All reports are exported as a file with the “.csv” (comma separated values) extension which can be opened with any spreadsheet or text editing software.
+
+## Saving a Report
+
+If you are happy with the report you have created and it is something you want to be able to come back to regularly, you can use the “Save configuration” option to create a link on your home page directly back to this report. (Note: if you chose “last month” or “last year” for your date settings, the direct link will always go back to the latest month or year from the current date. If you select a custom date, with a specific begin and end, the link will always return you to a report for those specific dates).
+
+To save a configuration you just have to give it a name. You may also overwrite an existing saved report to update it.
+
+![report save options](images/saveReport.png)
+
+Once the report is saved, you will see a link to the report from the home page and the Report List:
+
+![home page with saved report options](images/savedReports.png)
 
 ## The Report List
 
