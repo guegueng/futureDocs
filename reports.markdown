@@ -43,7 +43,7 @@ You will be taken to a screen to make any additional customizations or adjustmen
 
 On the initial report screen, you are presented with configurable options for date, columns or variables of data, and filters for those variables. 
 
-![report preview](imgages/reportPreview.png)
+![report preview](images/reportPreview.png)
 
 Expanding the Show/Hide Columns area allows you to add or remove variables that will show up as columns of data in the report.
 
