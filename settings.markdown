@@ -6,6 +6,12 @@ nav_order: 4
 
 # Settings Pages
 
+## Table of Contents
+* [Providers](#providers)
+* [Institutions](#institutions)
+* [Institution Groups](#institution-groups)
+* [Users](#users)
+
 CC-PLUS operates using three separate entities:
 * Users: people who can log in and use the web-based interface
 * Providers: organizations who publish harvestable COUNTER R5 reports

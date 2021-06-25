@@ -23,6 +23,5 @@ Once the application is installed, the application administrator will need to co
 
 The code repository and this documentation can be downloaded at: [http://github.com/palcilibraries/CC-PLUS](http://github.com/palcilibraries/cc-plus).
 
-If you would like to learn more about the CC-PLUS project, visit the project home page at: [http://cc-plus.org](http://cc-plus.org).
 
-This project has been generously supported by funding from the Institute of Museum and Library Services (IMLS) and the vision, time, and expertise of mulitple consortia and volunteers across North America and Europe. Full details the project partners, funding and objectives can be found here: [http://www.palci.org/cc-plus-overview/](http://www.palci.org/cc-plus-overview/).
+This project has been generously supported by funding from the Institute of Museum and Library Services (IMLS) and the vision, time, and expertise of mulitple consortia and volunteers across North America and Europe. Full details the project partners, funding and objectives can be found here: [http://cc-plus.org](http://cc-plus.org).

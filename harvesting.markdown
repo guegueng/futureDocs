@@ -6,6 +6,12 @@ nav_order: 6
 
 # Harvesting Reports
 
+## Table of Contents
+* [Starting a Harvest Manually](#starting-a-harvest-manually)
+* [Monitoring Harvest Progress](#monitoring-harvest-progress)
+* [Failed Harvest Alerts](#failed-harvest-alerts)
+
+## Starting a Harvest Manually
 When a connection is made between an institution and a provider, CC-PLUS will automatically harvest the specified reports on a monthly basis. However, there may be a need to manually harvest or re-harvest data during the initial set-up, or when data has been restated or fixed.
 
 Instructions below are given for two types of users: Admins who can harvest data for multiple institutions, and Managers who can harvest only for their own institution
@@ -26,7 +32,7 @@ Instructions below are given for two types of users: Admins who can harvest data
 5. Hit the “Submit” button to begin the harvest. You should get a message that the harvests have been added to the queue.
 6. To monitor the status of the harvest(s), go to Activity -> Harvests in the Main Navigation. You will see a list of harvests starting with the newest. 
 
-## Monitoring Harvests in CC-PLUS
+## Monitoring Harvest Progress
 
 The Harvest log is found by clicking "Activity -> Harvests" in the main navigation. On this page, monthly harvests of data are represented in a single line. A “harvest” may be attempted up to 10 times to account for typical issues and delays with providers who publish data. 
 
