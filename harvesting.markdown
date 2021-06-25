@@ -24,11 +24,11 @@ Instructions below are given for two types of users: Admins who can harvest data
     * Choose whether you would like the harvest to begin immediately, or be queued to run overnight. Choosing immediate harvest, will put these harvests to the top of the queue ahead of any other harvests that are currently in process.
     ![selecting report date](images/reportDate.png)
 5. Hit the “Submit” button to begin the harvest. You should get a message that the harvests have been added to the queue.
-6. To monitor the status of the harvest(s), go to Activity -> Harvests in the Main Navigation. You will see a list of harvests starting with the newest. See [forthcoming harvest queue documentation] for more information on the Harvest log.
+6. To monitor the status of the harvest(s), go to Activity -> Harvests in the Main Navigation. You will see a list of harvests starting with the newest. 
 
 ## Monitoring Harvests in CC-PLUS
 
-Monthly harvests of data are represented in a single line. A “harvest” may be attempted up to 10 times to account for typical issues and delays with providers who publish data. 
+The Harvest log is found by clicking "Activity -> Harvests" in the main navigation. On this page, monthly harvests of data are represented in a single line. A “harvest” may be attempted up to 10 times to account for typical issues and delays with providers who publish data. 
 
 The line for each harvest lists: 
 1. the date of the latest attempt
@@ -38,10 +38,13 @@ The line for each harvest lists:
 5. the month that the harvested data reflects
 6. the number of attempts undertaken
 7. the status
+8. a button to go to a page with more detail about that harvest attempt
 
 ![harvest log page](images/harvestLog.png)
 
-Harvest statuses:
+The harvest log can be filtered using the drop-downs at the top of the list. Clicking checkboxes beside each harvest enables the "Bulk Actions" drop-down to affect them. Using this drop-down, you can stop, restart, or delete a harvest.
+
+The Status drop-down lists the following harvest statuses:
 * Success: the harvest has completed successfully
 * Fail: the harvest failed after 10 retries
 * New: the harvest job has been created, but has not yet been put in queue
@@ -51,13 +54,15 @@ Harvest statuses:
 * Stopped: the harvest has been stopped manually by the user
 * ReQueued: the harvest has been attempted 1 or more times unsuccessfully and has been put back in the queue to try again
 
-A button at the end of the line leads to more details about the specific harvest. Clicking this will open a new page with the specifics of that harvest:
+On each harvest line in the log, a failure will also include a brief description of what the last error message was. More information about harvests, including error messages can be found by clicking the "Details" button. This will open a new page with the specifics of that harvest:
 
 ![harvest detail page](images/harvestDetail.png)
 
-From this page you can see the result of each attempt to harvest the monthly report. The status of the last attempt is displayed at the top of the page. If the last attempt was unsuccessful, the error message is displayed. Clicking on the help arrow next to the message will pop-up a further explanation of the error and a suggested solution:
+From this page you can see the result of each attempt to harvest the monthly report. The status of the last attempt is displayed at the top of the page. If the last attempt was unsuccessful, the error message is displayed. Clicking on the question mark next to the message will pop-up a further explanation of the error and a suggested solution:
 
 ![error code](images/errorCode.png)
+
+You can also see the error by downloading the Raw Data in JSON and viewing it in a browser. A full list of errors and suggested actions is available at: [link here]. 
 
 If the error is not something that can be fixed before the next attempt, you can press the “stop” button to stop the harvest process. Once an issue has been fixed, returning to this page and pressing “restart” will put the harvest back in the queue for harvesting.
 
@@ -65,7 +70,7 @@ Versions of the harvest log are also available on the Institution and Provider s
 
 ## Failed Harvest Alerts
 
-Alerts occur when a harvest attempt fails 10 times. In addition to being listed in the harvest log with the status “Failed”, these harvests will also be listed on the Alerts page:
+The other sub-page under "Activity" is Alerts. These occur when a harvest attempt fails 10 times. In addition to being listed in the harvest log with the status “Failed”, these harvests will also be listed on the Alerts page:
 
 ![alert page](images/alerts.png)
 
