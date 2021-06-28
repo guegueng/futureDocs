@@ -27,5 +27,5 @@ search_enabled: true
 search.previews: 3
 search_tokenizer_separator: /[\s/]+/
 #heading_anchors: true
-color_scheme: "dark"
+#color_scheme: "dark"
 #theme: "just-the-docs"
