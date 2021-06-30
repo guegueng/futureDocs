@@ -139,7 +139,7 @@ You must also assign the user to an existing institution and roles. These will b
 
 If any information for the user changes, it can be edited by an Admin account, or a Manager account (for other Managers and Users only). If a user forgets or loses their password, the password can be updated by the Admin or Manager or the user can click the "Forgot Password" button on the login screen to prompt an email with instructions for resetting the password.
 
-![forgot password dialog](image here)
+
 
 
 
